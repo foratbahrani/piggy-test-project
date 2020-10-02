@@ -22,6 +22,10 @@
 		FDF9399125274FDF006CDA15 /* HomeSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9399025274FDF006CDA15 /* HomeSearchField.swift */; };
 		FDF9399525275FCB006CDA15 /* HomeVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9399425275FCB006CDA15 /* HomeVC+Extensions.swift */; };
 		FDF9399925276CF0006CDA15 /* HomeTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9399825276CF0006CDA15 /* HomeTitleLabel.swift */; };
+		FDF9399F25278BC8006CDA15 /* SearchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF9399E25278BC8006CDA15 /* SearchScreen.storyboard */; };
+		FDF939A125278D4F006CDA15 /* SearchScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939A025278D4F006CDA15 /* SearchScreenVC.swift */; };
+		FDF939AA2527905D006CDA15 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939A92527905D006CDA15 /* RoundedView.swift */; };
+		FDF939AC252791CD006CDA15 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939AB252791CD006CDA15 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,10 @@
 		FDF9399025274FDF006CDA15 /* HomeSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchField.swift; sourceTree = "<group>"; };
 		FDF9399425275FCB006CDA15 /* HomeVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+Extensions.swift"; sourceTree = "<group>"; };
 		FDF9399825276CF0006CDA15 /* HomeTitleLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleLabel.swift; sourceTree = "<group>"; };
+		FDF9399E25278BC8006CDA15 /* SearchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchScreen.storyboard; sourceTree = "<group>"; };
+		FDF939A025278D4F006CDA15 /* SearchScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchScreenVC.swift; sourceTree = "<group>"; };
+		FDF939A92527905D006CDA15 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		FDF939AB252791CD006CDA15 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,8 +153,10 @@
 		FDF93978252744C3006CDA15 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FDF939A225278F42006CDA15 /* General */,
 				FDF9397E252747F5006CDA15 /* WelcomeScreen */,
 				FDF9398625274B14006CDA15 /* HomeScreen */,
+				FDF9399A25278B6B006CDA15 /* SearchScreen */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -219,6 +229,72 @@
 				FDF9399425275FCB006CDA15 /* HomeVC+Extensions.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDF9399A25278B6B006CDA15 /* SearchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FDF9399D25278B93006CDA15 /* Models */,
+				FDF9399C25278B8B006CDA15 /* Views */,
+				FDF9399B25278B84006CDA15 /* Controllers */,
+			);
+			path = SearchScreen;
+			sourceTree = "<group>";
+		};
+		FDF9399B25278B84006CDA15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939A025278D4F006CDA15 /* SearchScreenVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDF9399C25278B8B006CDA15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF9399E25278BC8006CDA15 /* SearchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDF9399D25278B93006CDA15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF939A225278F42006CDA15 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939A525278F58006CDA15 /* Models */,
+				FDF939A425278F53006CDA15 /* Views */,
+				FDF939A325278F4B006CDA15 /* Controllers */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		FDF939A325278F4B006CDA15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDF939A425278F53006CDA15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDF939A525278F58006CDA15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939A92527905D006CDA15 /* RoundedView.swift */,
+				FDF939AB252791CD006CDA15 /* ShadowView.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +403,7 @@
 			files = (
 				FDF9395325273F5F006CDA15 /* LaunchScreen.storyboard in Resources */,
 				FDF9398F25274C44006CDA15 /* HomeScreen.storyboard in Resources */,
+				FDF9399F25278BC8006CDA15 /* SearchScreen.storyboard in Resources */,
 				FDF9397725274376006CDA15 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				FDF9395025273F5F006CDA15 /* Assets.xcassets in Resources */,
 				FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */,
@@ -355,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF9394725273F5E006CDA15 /* AppDelegate.swift in Sources */,
+				FDF939AC252791CD006CDA15 /* ShadowView.swift in Sources */,
 				FDF9399525275FCB006CDA15 /* HomeVC+Extensions.swift in Sources */,
 				FDF9399925276CF0006CDA15 /* HomeTitleLabel.swift in Sources */,
 				FDF9399125274FDF006CDA15 /* HomeSearchField.swift in Sources */,
@@ -362,6 +440,8 @@
 				FDF93983252748BA006CDA15 /* WelcomeLogo.swift in Sources */,
 				FDF9397D25274552006CDA15 /* WelcomeScreenVC.swift in Sources */,
 				FDF9394925273F5E006CDA15 /* SceneDelegate.swift in Sources */,
+				FDF939AA2527905D006CDA15 /* RoundedView.swift in Sources */,
+				FDF939A125278D4F006CDA15 /* SearchScreenVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

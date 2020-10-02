@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 class HomeSearchField: UITextField {
     
-    @IBInspectable var cornerRadius : CGFloat = 32
+    @IBInspectable var cornerRadius : CGFloat = 32 { didSet { self.layer.cornerRadius = self.cornerRadius } }
     @IBInspectable var padding : CGFloat = 24
     let searchIcon : UIImageView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
     var trailingEdge : NSLayoutConstraint? = nil
