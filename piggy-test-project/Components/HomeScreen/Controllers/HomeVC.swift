@@ -21,6 +21,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         hideKeyboardOnTap()
         animate()
+        
     }
 
 }

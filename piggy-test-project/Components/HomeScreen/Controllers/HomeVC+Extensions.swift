@@ -57,14 +57,21 @@ extension HomeVC {
         titleLabel.expand(notification: notification, disactivate: titleLabelHeight)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if (segue.destination is SearchScreenVC && sender is String) {
+            (segue.destination as! SearchScreenVC).searchFor = sender as? String
+        }
+    }
+    
 }
-
-
 
 extension HomeVC : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
+        self.performSegue(withIdentifier: "showSearch", sender: textField.text)
+        return true
     }
     
 }

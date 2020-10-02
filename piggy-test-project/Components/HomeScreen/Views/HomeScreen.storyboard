@@ -152,11 +152,22 @@
                         <outlet property="titleLabel" destination="Lbr-ev-zpJ" id="Apd-Z4-2DP"/>
                         <outlet property="titleLabelHeight" destination="rMg-2M-Nls" id="gPH-IR-RcS"/>
                         <outlet property="useBrowserButton" destination="jHm-Lb-TRL" id="A4L-VN-pmr"/>
+                        <segue destination="BW0-99-22m" kind="show" identifier="showSearch" id="6Dk-54-j0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMl-g3-0Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1146.376811594203" y="2.6785714285714284"/>
+        </scene>
+        <!--SearchScreen-->
+        <scene sceneID="7Kr-hl-btc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SearchScreen" id="BW0-99-22m" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="k1v-5t-j95"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bw8-Vv-UgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="-66"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SnG-YU-74h">
