@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cwe-il-bnD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-VariableFont_wght.ttf">
+            <string>Quicksand-Light_Bold</string>
+            <string>Quicksand-Light_Medium</string>
+            <string>Quicksand-Light_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="hAu-6e-t2a">
+            <objects>
+                <viewController title="Home" modalPresentationStyle="fullScreen" id="C5z-Le-WNg" customClass="HomeVC" customModule="piggy_test_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GHo-wc-Kcl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-ev-zpJ">
+                                <rect key="frame" x="24" y="128" width="366" height="224"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggyLabeled" translatesAutoresizingMaskIntoConstraints="NO" id="xNR-mL-u4n">
+                                <rect key="frame" x="169.5" y="52" width="75" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xNR-mL-u4n" secondAttribute="height" multiplier="15:8" id="7IK-6e-fuQ"/>
+                                    <constraint firstAttribute="height" constant="40" id="l3S-HU-Fhk"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Amazon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MS9-ox-PLc" customClass="HomeSearchField" customModule="piggy_test_project" customModuleProvider="target">
+                                <rect key="frame" x="24" y="400" width="366" height="70"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="M2F-IO-vmo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Medium" family="Quicksand" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="86j-UP-rRJ">
+                                <rect key="frame" x="139" y="518" width="136.5" height="20"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdR-o9-5Uq">
+                                        <rect key="frame" x="0.0" y="0.0" width="45.5" height="20"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-m9-TFJ">
+                                                <rect key="frame" x="0.0" y="11" width="45.5" height="0.5"/>
+                                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="a32-Cy-7co"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="bxv-m9-TFJ" secondAttribute="trailing" id="MKG-vF-7r6"/>
+                                            <constraint firstItem="bxv-m9-TFJ" firstAttribute="leading" secondItem="jdR-o9-5Uq" secondAttribute="leading" id="Qwx-si-Bj0"/>
+                                            <constraint firstItem="bxv-m9-TFJ" firstAttribute="centerY" secondItem="jdR-o9-5Uq" secondAttribute="centerY" constant="1" id="lm5-9e-XIE"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijV-4q-XAt">
+                                        <rect key="frame" x="61.5" y="0.0" width="13" height="20"/>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHI-Wm-8Nl">
+                                        <rect key="frame" x="90.5" y="0.0" width="46" height="20"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R53-z6-Rfy">
+                                                <rect key="frame" x="0.0" y="11" width="46" height="0.5"/>
+                                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="0.5" id="o8T-j9-tIL"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="R53-z6-Rfy" secondAttribute="trailing" id="8ZD-yR-tpq"/>
+                                            <constraint firstItem="R53-z6-Rfy" firstAttribute="leading" secondItem="PHI-Wm-8Nl" secondAttribute="leading" id="e60-rt-hE8"/>
+                                            <constraint firstItem="R53-z6-Rfy" firstAttribute="centerY" secondItem="PHI-Wm-8Nl" secondAttribute="centerY" constant="1" id="uNz-cK-iiH"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Xgp-HP-XLR"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHm-Lb-TRL">
+                                <rect key="frame" x="24" y="574" width="366" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="rRg-Y9-UzY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
+                                <state key="normal" title="Use a Browser">
+                                    <color key="titleColor" name="piggyPink"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xNR-mL-u4n" firstAttribute="centerX" secondItem="GHo-wc-Kcl" secondAttribute="centerX" id="39R-fb-b8V"/>
+                            <constraint firstItem="86j-UP-rRJ" firstAttribute="top" secondItem="MS9-ox-PLc" secondAttribute="bottom" constant="48" id="6Kf-bG-QkJ"/>
+                            <constraint firstItem="86j-UP-rRJ" firstAttribute="centerX" secondItem="GHo-wc-Kcl" secondAttribute="centerX" id="8NE-DS-dKh"/>
+                            <constraint firstItem="MS9-ox-PLc" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="9t6-Vi-P69"/>
+                            <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="jHm-Lb-TRL" secondAttribute="trailing" constant="24" id="JQs-Wc-1c4"/>
+                            <constraint firstItem="PHI-Wm-8Nl" firstAttribute="width" secondItem="MS9-ox-PLc" secondAttribute="width" multiplier="0.125" id="PYs-n8-rVZ"/>
+                            <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="Lbr-ev-zpJ" secondAttribute="trailing" constant="24" id="Sik-nj-fxE"/>
+                            <constraint firstItem="xNR-mL-u4n" firstAttribute="top" secondItem="xQK-iP-1Jq" secondAttribute="top" constant="8" id="b0p-jd-qsA"/>
+                            <constraint firstItem="Lbr-ev-zpJ" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="b1s-fq-HcO"/>
+                            <constraint firstItem="jHm-Lb-TRL" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="ecl-6d-gqO"/>
+                            <constraint firstItem="MS9-ox-PLc" firstAttribute="top" secondItem="Lbr-ev-zpJ" secondAttribute="bottom" constant="48" id="jpz-Rq-kL6"/>
+                            <constraint firstItem="jHm-Lb-TRL" firstAttribute="top" secondItem="86j-UP-rRJ" secondAttribute="bottom" constant="36" id="nwr-51-lw4"/>
+                            <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="MS9-ox-PLc" secondAttribute="trailing" constant="24" id="rTO-TT-ZXg"/>
+                            <constraint firstItem="Lbr-ev-zpJ" firstAttribute="top" secondItem="xNR-mL-u4n" secondAttribute="bottom" constant="36" id="uqd-cq-8c3"/>
+                            <constraint firstItem="jdR-o9-5Uq" firstAttribute="width" secondItem="MS9-ox-PLc" secondAttribute="width" multiplier="0.125" id="whm-uI-t9x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xQK-iP-1Jq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="51b-nF-dfE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZMl-g3-0Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146.376811594203" y="2.6785714285714284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SnG-YU-74h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="cwe-il-bnD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fb0-8J-o16">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C5z-Le-WNg" kind="relationship" relationship="rootViewController" id="l28-zs-9bD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyY-w2-vUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236.23188405797103" y="2.6785714285714284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="piggyLabeled" width="135" height="57"/>
+        <namedColor name="piggyPink">
+            <color red="0.91469640379220662" green="0.56124338599764789" blue="0.71486841206323559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
