@@ -23,12 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-ev-zpJ">
-                                <rect key="frame" x="24" y="128" width="366" height="224"/>
-                                <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="64"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggyLabeled" translatesAutoresizingMaskIntoConstraints="NO" id="xNR-mL-u4n">
                                 <rect key="frame" x="169.5" y="52" width="75" height="40"/>
                                 <constraints>
@@ -37,7 +31,7 @@
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Amazon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MS9-ox-PLc" customClass="HomeSearchField" customModule="piggy_test_project" customModuleProvider="target">
-                                <rect key="frame" x="24" y="400" width="366" height="70"/>
+                                <rect key="frame" x="24" y="321" width="366" height="70"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="M2F-IO-vmo"/>
@@ -49,9 +43,12 @@
                                         <real key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="C5z-Le-WNg" id="emP-I4-jkE"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="86j-UP-rRJ">
-                                <rect key="frame" x="139" y="518" width="136.5" height="20"/>
+                                <rect key="frame" x="138.5" y="439" width="137.5" height="20"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdR-o9-5Uq">
                                         <rect key="frame" x="0.0" y="0.0" width="45.5" height="20"/>
@@ -72,13 +69,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijV-4q-XAt">
-                                        <rect key="frame" x="61.5" y="0.0" width="13" height="20"/>
+                                        <rect key="frame" x="61.5" y="0.0" width="14" height="20"/>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHI-Wm-8Nl">
-                                        <rect key="frame" x="90.5" y="0.0" width="46" height="20"/>
+                                        <rect key="frame" x="91.5" y="0.0" width="46" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R53-z6-Rfy">
                                                 <rect key="frame" x="0.0" y="11" width="46" height="0.5"/>
@@ -101,15 +98,30 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHm-Lb-TRL">
-                                <rect key="frame" x="24" y="574" width="366" height="45"/>
+                                <rect key="frame" x="132" y="495" width="150" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="rRg-Y9-UzY"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                 <state key="normal" title="Use a Browser">
                                     <color key="titleColor" name="piggyPink"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-ev-zpJ" customClass="HomeTitleLabel" customModule="piggy_test_project" customModuleProvider="target">
+                                <rect key="frame" x="24" y="128" width="366" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="rMg-2M-Nls"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rMg-2M-Nls"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -117,12 +129,13 @@
                             <constraint firstItem="86j-UP-rRJ" firstAttribute="top" secondItem="MS9-ox-PLc" secondAttribute="bottom" constant="48" id="6Kf-bG-QkJ"/>
                             <constraint firstItem="86j-UP-rRJ" firstAttribute="centerX" secondItem="GHo-wc-Kcl" secondAttribute="centerX" id="8NE-DS-dKh"/>
                             <constraint firstItem="MS9-ox-PLc" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="9t6-Vi-P69"/>
-                            <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="jHm-Lb-TRL" secondAttribute="trailing" constant="24" id="JQs-Wc-1c4"/>
+                            <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jHm-Lb-TRL" secondAttribute="trailing" constant="24" id="JQs-Wc-1c4"/>
                             <constraint firstItem="PHI-Wm-8Nl" firstAttribute="width" secondItem="MS9-ox-PLc" secondAttribute="width" multiplier="0.125" id="PYs-n8-rVZ"/>
                             <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="Lbr-ev-zpJ" secondAttribute="trailing" constant="24" id="Sik-nj-fxE"/>
                             <constraint firstItem="xNR-mL-u4n" firstAttribute="top" secondItem="xQK-iP-1Jq" secondAttribute="top" constant="8" id="b0p-jd-qsA"/>
                             <constraint firstItem="Lbr-ev-zpJ" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="b1s-fq-HcO"/>
-                            <constraint firstItem="jHm-Lb-TRL" firstAttribute="leading" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="ecl-6d-gqO"/>
+                            <constraint firstItem="jHm-Lb-TRL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xQK-iP-1Jq" secondAttribute="leading" constant="24" id="ecl-6d-gqO"/>
+                            <constraint firstItem="jHm-Lb-TRL" firstAttribute="centerX" secondItem="xQK-iP-1Jq" secondAttribute="centerX" id="fpL-jd-uTA"/>
                             <constraint firstItem="MS9-ox-PLc" firstAttribute="top" secondItem="Lbr-ev-zpJ" secondAttribute="bottom" constant="48" id="jpz-Rq-kL6"/>
                             <constraint firstItem="jHm-Lb-TRL" firstAttribute="top" secondItem="86j-UP-rRJ" secondAttribute="bottom" constant="36" id="nwr-51-lw4"/>
                             <constraint firstItem="xQK-iP-1Jq" firstAttribute="trailing" secondItem="MS9-ox-PLc" secondAttribute="trailing" constant="24" id="rTO-TT-ZXg"/>
@@ -132,6 +145,14 @@
                         <viewLayoutGuide key="safeArea" id="xQK-iP-1Jq"/>
                     </view>
                     <navigationItem key="navigationItem" id="51b-nF-dfE"/>
+                    <connections>
+                        <outlet property="orStackView" destination="86j-UP-rRJ" id="w3t-Hs-zcX"/>
+                        <outlet property="piggyIconImageView" destination="xNR-mL-u4n" id="q3y-Qn-P7Q"/>
+                        <outlet property="searchField" destination="MS9-ox-PLc" id="RDx-7f-Zrp"/>
+                        <outlet property="titleLabel" destination="Lbr-ev-zpJ" id="Apd-Z4-2DP"/>
+                        <outlet property="titleLabelHeight" destination="rMg-2M-Nls" id="gPH-IR-RcS"/>
+                        <outlet property="useBrowserButton" destination="jHm-Lb-TRL" id="A4L-VN-pmr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMl-g3-0Mc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,7 +179,7 @@
     <resources>
         <image name="piggyLabeled" width="135" height="57"/>
         <namedColor name="piggyPink">
-            <color red="0.91469640379220662" green="0.56124338599764789" blue="0.71486841206323559" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.91500002145767212" green="0.56099998950958252" blue="0.7149999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

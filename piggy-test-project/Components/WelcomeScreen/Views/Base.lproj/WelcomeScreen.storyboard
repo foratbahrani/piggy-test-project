@@ -32,7 +32,7 @@
                     </view>
                     <connections>
                         <outlet property="LogoImageView" destination="kId-Jy-s4D" id="VnB-uG-471"/>
-                        <segue destination="fzS-jS-V5l" kind="show" identifier="showHome" id="dUO-sw-Abl"/>
+                        <segue destination="fzS-jS-V5l" kind="show" identifier="showHome" animates="NO" id="dUO-sw-Abl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
