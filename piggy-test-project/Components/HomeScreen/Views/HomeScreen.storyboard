@@ -145,6 +145,9 @@
                         <viewLayoutGuide key="safeArea" id="xQK-iP-1Jq"/>
                     </view>
                     <navigationItem key="navigationItem" id="51b-nF-dfE"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="orStackView" destination="86j-UP-rRJ" id="w3t-Hs-zcX"/>
                         <outlet property="piggyIconImageView" destination="xNR-mL-u4n" id="q3y-Qn-P7Q"/>
@@ -178,6 +181,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="heroNavigationAnimationTypeString" value="fade"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="C5z-Le-WNg" kind="relationship" relationship="rootViewController" id="l28-zs-9bD"/>
                     </connections>

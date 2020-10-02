@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class HomeVC: UIViewController {
     
@@ -21,7 +22,7 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         hideKeyboardOnTap()
         animate()
-        
+        setupHero()
     }
 
 }

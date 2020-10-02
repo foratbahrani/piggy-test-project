@@ -38,6 +38,12 @@ extension HomeVC {
         self.view.endEditing(true)
     }
     
+    func setupHero() {
+        self.searchField.hero.id = "searchField"
+        self.piggyIconImageView.hero.modifiers = [.translate(y: -100), .fade]
+        self.titleLabel.hero.modifiers = [.translate(y: -100), .fade]
+    }
+    
 }
 
 // keyboard functions
@@ -54,7 +60,7 @@ extension HomeVC {
     }
 
     @objc fileprivate func keyboardWillHide(notification: NSNotification){
-        titleLabel.expand(notification: notification, disactivate: titleLabelHeight)
+//        titleLabel.expand(notification: notification, disactivate: titleLabelHeight)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

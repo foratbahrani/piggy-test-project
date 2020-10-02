@@ -7,5 +7,6 @@ target 'piggy-test-project' do
 
   # Pods for piggy-test-project
   pod 'SkeletonView'
+  pod 'Hero'
 
 end

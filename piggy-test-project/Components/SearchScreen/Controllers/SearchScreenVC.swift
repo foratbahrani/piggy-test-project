@@ -8,17 +8,20 @@
 
 import UIKit
 import SkeletonView
+import Hero
 
 class SearchScreenVC: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var backButton: UIButton!
+    @IBOutlet var searchField: HomeSearchField!
     var searchFor : String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupHero()
         registerCells()
+        self.searchField.text = searchFor
         self.view.showSkeleton()
     }
     

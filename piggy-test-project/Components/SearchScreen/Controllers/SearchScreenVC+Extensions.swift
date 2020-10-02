@@ -13,4 +13,8 @@ extension SearchScreenVC {
         let cell = UINib(nibName: "SearchResultsCell", bundle: nil)
         self.collectionView.register(cell, forCellWithReuseIdentifier: "SearchResultsCell")
     }
+    
+    func setupHero() {
+        self.searchField.hero.id = "searchField"
+    }
 }

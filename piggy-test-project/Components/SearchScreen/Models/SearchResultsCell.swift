@@ -12,6 +12,7 @@ class SearchResultsCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
 
 }
