@@ -30,6 +30,7 @@
 		FDF939AF2527DC72006CDA15 /* SearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939AD2527DC72006CDA15 /* SearchResultsCell.swift */; };
 		FDF939B02527DC72006CDA15 /* SearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF939AE2527DC72006CDA15 /* SearchResultsCell.xib */; };
 		FDF939B22527E18D006CDA15 /* SearchScreenVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939B12527E18D006CDA15 /* SearchScreenVC+Extensions.swift */; };
+		FDF939B52527F330006CDA15 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939B42527F330006CDA15 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		FDF939AD2527DC72006CDA15 /* SearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsCell.swift; sourceTree = "<group>"; };
 		FDF939AE2527DC72006CDA15 /* SearchResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsCell.xib; sourceTree = "<group>"; };
 		FDF939B12527E18D006CDA15 /* SearchScreenVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchScreenVC+Extensions.swift"; sourceTree = "<group>"; };
+		FDF939B42527F330006CDA15 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FDF93978252744C3006CDA15 /* Components */,
+				FDF939B32527F31D006CDA15 /* Extensions */,
 				FDF9394625273F5E006CDA15 /* AppDelegate.swift */,
 				FDF9394825273F5E006CDA15 /* SceneDelegate.swift */,
 				FDF9394F25273F5F006CDA15 /* Assets.xcassets */,
@@ -328,6 +331,14 @@
 				FDF939AB252791CD006CDA15 /* ShadowView.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FDF939B32527F31D006CDA15 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939B42527F330006CDA15 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -519,6 +530,7 @@
 				FDF939AF2527DC72006CDA15 /* SearchResultsCell.swift in Sources */,
 				FDF93983252748BA006CDA15 /* WelcomeLogo.swift in Sources */,
 				FDF9397D25274552006CDA15 /* WelcomeScreenVC.swift in Sources */,
+				FDF939B52527F330006CDA15 /* UIViewController+Extensions.swift in Sources */,
 				FDF9394925273F5E006CDA15 /* SceneDelegate.swift in Sources */,
 				FDF939AA2527905D006CDA15 /* RoundedView.swift in Sources */,
 				FDF939A125278D4F006CDA15 /* SearchScreenVC.swift in Sources */,

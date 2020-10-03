@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oOw-om-dkV">
+                            <collectionView clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oOw-om-dkV">
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="16" id="wXf-0S-WJO">
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="wXf-0S-WJO">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                    <inset key="sectionInset" minX="16" minY="32" maxX="16" maxY="16"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                                 <userDefinedRuntimeAttributes>
@@ -59,6 +59,9 @@
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="5o1-hb-phS" id="FQU-yn-HeG"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8IZ-M5-V9M" customClass="RoundedView" customModule="piggy_test_project" customModuleProvider="target">
                                         <rect key="frame" x="16" y="54" width="40" height="40"/>
@@ -105,6 +108,9 @@
                                                     <color key="titleColor" name="piggyPink"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="semibold"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="refreshButtonTouchUpInside:" destination="5o1-hb-phS" eventType="touchUpInside" id="M5v-0B-J8Q"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -127,7 +133,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Ige-YO-CVm" firstAttribute="centerY" secondItem="eLJ-Qd-DJJ" secondAttribute="centerY" id="TP3-dK-etH"/>
                                     <constraint firstItem="eLJ-Qd-DJJ" firstAttribute="centerX" secondItem="UZR-Xb-tOC" secondAttribute="centerX" id="XZO-ns-U7s"/>
@@ -161,8 +167,8 @@
                             <constraint firstItem="CHm-4i-qQq" firstAttribute="bottom" secondItem="oOw-om-dkV" secondAttribute="bottom" id="5qd-9x-CHi"/>
                             <constraint firstItem="UZR-Xb-tOC" firstAttribute="trailing" secondItem="CHm-4i-qQq" secondAttribute="trailing" id="6Nb-IE-Ydt"/>
                             <constraint firstItem="oOw-om-dkV" firstAttribute="leading" secondItem="CHm-4i-qQq" secondAttribute="leading" id="F47-nX-jZ9"/>
+                            <constraint firstItem="oOw-om-dkV" firstAttribute="top" secondItem="UZR-Xb-tOC" secondAttribute="bottom" id="kjQ-0H-Ts0"/>
                             <constraint firstItem="CHm-4i-qQq" firstAttribute="top" secondItem="UZR-Xb-tOC" secondAttribute="bottom" constant="-65" id="l2r-GT-7Mf"/>
-                            <constraint firstItem="oOw-om-dkV" firstAttribute="top" secondItem="UZR-Xb-tOC" secondAttribute="bottom" id="m8c-NS-Ego"/>
                             <constraint firstItem="oOw-om-dkV" firstAttribute="trailing" secondItem="CHm-4i-qQq" secondAttribute="trailing" id="xrm-QP-Fjf"/>
                             <constraint firstItem="UZR-Xb-tOC" firstAttribute="top" secondItem="q2e-lo-D0G" secondAttribute="top" id="ynk-1F-bgb"/>
                         </constraints>
@@ -177,6 +183,7 @@
                     <connections>
                         <outlet property="backButton" destination="lZD-De-Drq" id="izc-eO-pI9"/>
                         <outlet property="collectionView" destination="oOw-om-dkV" id="uM3-jt-Ihw"/>
+                        <outlet property="refreshButton" destination="Q95-FX-L4M" id="INQ-JG-pN6"/>
                         <outlet property="searchField" destination="eLJ-Qd-DJJ" id="KX3-oJ-1PB"/>
                     </connections>
                 </viewController>

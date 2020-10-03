@@ -9,24 +9,33 @@
 import UIKit
 import SkeletonView
 import Hero
+import SwiftyJSON
 
 class SearchScreenVC: UIViewController {
 
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var backButton: UIButton!
     @IBOutlet var searchField: HomeSearchField!
+    @IBOutlet var refreshButton: UIButton!
     var searchFor : String? = nil
+    var data : [JSON] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHero()
         registerCells()
+        hideKeyboardOnTap()
         self.searchField.text = searchFor
+        search(for: searchFor)
         self.view.showSkeleton()
     }
     
     @IBAction func backButtonTouchUpInside(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func refreshButtonTouchUpInside(_ sender: Any) {
+        self.search(for: searchField.text)
     }
     
 }
@@ -43,11 +52,13 @@ extension SearchScreenVC : UICollectionViewDelegate, SkeletonCollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultsCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultsCell", for: indexPath) as! SearchResultsCell
+        cell.data = data[indexPath.row]
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -57,4 +68,6 @@ extension SearchScreenVC : UICollectionViewDelegate, SkeletonCollectionViewDataS
         let perimeter = (collectionView.bounds.size.width / cellsPerRow) - (gap / cellsPerRow) - (inset / cellsPerRow)
         return CGSize(width: perimeter, height: perimeter)
     }
+    
+    
 }

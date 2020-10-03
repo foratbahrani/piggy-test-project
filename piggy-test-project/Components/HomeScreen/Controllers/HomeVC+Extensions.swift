@@ -29,15 +29,6 @@ extension HomeVC {
         }
     }
     
-    func hideKeyboardOnTap() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        self.view.addGestureRecognizer(tap)
-    }
-    
-    @objc fileprivate func hideKeyboard() {
-        self.view.endEditing(true)
-    }
-    
     func setupHero() {
         self.searchField.hero.id = "searchField"
         self.piggyIconImageView.hero.modifiers = [.translate(y: -100), .fade]
@@ -46,7 +37,7 @@ extension HomeVC {
     
 }
 
-// keyboard functions
+// MARK: keyboard functions
 extension HomeVC {
         
     override func viewWillAppear(_ animated: Bool) {
@@ -72,11 +63,14 @@ extension HomeVC {
     
 }
 
+// MARK: textfield delegate
 extension HomeVC : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.endEditing(true)
-        self.performSegue(withIdentifier: "showSearch", sender: textField.text)
+        if let text = textField.text, text.count > 0 {
+            self.performSegue(withIdentifier: "showSearch", sender: textField.text)
+        }
         return true
     }
     
