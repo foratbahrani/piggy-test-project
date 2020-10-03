@@ -24,7 +24,7 @@ class SearchScreenVC: UIViewController {
         super.viewDidLoad()
         setupHero()
         registerCells()
-        hideKeyboardOnTap()
+//hideKeyboardOnTap()
         self.searchField.text = searchFor
         search(for: searchFor)
         self.view.showSkeleton()
@@ -38,6 +38,11 @@ class SearchScreenVC: UIViewController {
         self.search(for: searchField.text)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.destination is DetailsScreenVC && sender is String) {
+            (segue.destination as! DetailsScreenVC).ASIN = sender as! String
+        }
+    }
 }
 
 
@@ -69,5 +74,9 @@ extension SearchScreenVC : UICollectionViewDelegate, SkeletonCollectionViewDataS
         return CGSize(width: perimeter, height: perimeter)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let ASIN = data[indexPath.row]["ASIN"].string
+        self.performSegue(withIdentifier: "showDetails", sender: ASIN)
+    }
     
 }

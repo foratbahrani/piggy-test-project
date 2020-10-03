@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vx7-pJ-U8m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-VariableFont_wght.ttf">
+            <string>Quicksand-Light_Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Details ScreenVC-->
+        <scene sceneID="gVQ-SK-BDG">
+            <objects>
+                <viewController id="Vx7-pJ-U8m" customClass="DetailsScreenVC" customModule="piggy_test_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nbi-a9-wdW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rd-m4-MAJ" customClass="ShadowView" customModule="piggy_test_project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gd9-VB-N1Z" customClass="RoundedView" customModule="piggy_test_project" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="54" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNR-Gf-Kta">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" name="piggyPink"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                                <state key="normal" image="chevron.left" catalog="system">
+                                                    <color key="titleColor" name="piggyPink"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="semibold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="BackButtonTouchUpInside:" destination="Vx7-pJ-U8m" eventType="touchUpInside" id="yts-Dq-y9Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5hj-Px-2en"/>
+                                            <constraint firstItem="jNR-Gf-Kta" firstAttribute="leading" secondItem="Gd9-VB-N1Z" secondAttribute="leading" id="7zP-Fj-8m1"/>
+                                            <constraint firstAttribute="bottom" secondItem="jNR-Gf-Kta" secondAttribute="bottom" id="H9H-ur-kLD"/>
+                                            <constraint firstItem="jNR-Gf-Kta" firstAttribute="top" secondItem="Gd9-VB-N1Z" secondAttribute="top" id="Nis-SB-vnT"/>
+                                            <constraint firstAttribute="trailing" secondItem="jNR-Gf-Kta" secondAttribute="trailing" id="V9N-DS-035"/>
+                                            <constraint firstAttribute="width" constant="40" id="Vdv-Di-Hb0"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftt" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Gd9-VB-N1Z" firstAttribute="leading" secondItem="4rd-m4-MAJ" secondAttribute="leading" constant="16" id="76X-Tm-wAN"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gd9-VB-N1Z" secondAttribute="bottom" constant="15" id="j2H-tp-zjD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123456789012" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-de-onJ">
+                                <rect key="frame" x="36" y="414" width="342" height="68"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="58"/>
+                                <color key="textColor" name="piggyPink"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product ASIN code is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="LwG-8E-7c2">
+                                <rect key="frame" x="128" y="387" width="158.5" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Light_Bold" family="Quicksand" pointSize="16"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AHD-de-onJ" firstAttribute="centerY" secondItem="Nbi-a9-wdW" secondAttribute="centerY" id="7Cj-dJ-ILn"/>
+                            <constraint firstItem="AHD-de-onJ" firstAttribute="centerX" secondItem="Nbi-a9-wdW" secondAttribute="centerX" id="Bxi-GA-Rfn"/>
+                            <constraint firstItem="8Ky-AN-IXy" firstAttribute="trailing" secondItem="AHD-de-onJ" secondAttribute="trailing" constant="36" id="EXN-Bf-qK0"/>
+                            <constraint firstItem="8Ky-AN-IXy" firstAttribute="top" secondItem="4rd-m4-MAJ" secondAttribute="bottom" constant="-65" id="H4f-Iy-1wy"/>
+                            <constraint firstItem="4rd-m4-MAJ" firstAttribute="trailing" secondItem="8Ky-AN-IXy" secondAttribute="trailing" id="bt1-3v-7w2"/>
+                            <constraint firstItem="AHD-de-onJ" firstAttribute="top" secondItem="LwG-8E-7c2" secondAttribute="bottom" constant="8" id="esZ-eI-AbF"/>
+                            <constraint firstItem="4rd-m4-MAJ" firstAttribute="leading" secondItem="8Ky-AN-IXy" secondAttribute="leading" id="nE2-NC-Y3G"/>
+                            <constraint firstItem="4rd-m4-MAJ" firstAttribute="top" secondItem="Nbi-a9-wdW" secondAttribute="top" id="wfR-xq-XOX"/>
+                            <constraint firstItem="LwG-8E-7c2" firstAttribute="centerX" secondItem="Nbi-a9-wdW" secondAttribute="centerX" id="xaD-pZ-7wv"/>
+                            <constraint firstItem="AHD-de-onJ" firstAttribute="leading" secondItem="8Ky-AN-IXy" secondAttribute="leading" constant="36" id="y1y-8h-oqH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Ky-AN-IXy"/>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="asinCodeLabel" destination="AHD-de-onJ" id="x7g-F6-GFg"/>
+                        <outlet property="backButton" destination="jNR-Gf-Kta" id="pjy-Av-B4i"/>
+                        <outlet property="detailsLabel" destination="LwG-8E-7c2" id="QK9-zN-EnY"/>
+                        <outlet property="header" destination="4rd-m4-MAJ" id="Q4u-q9-exJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MJo-ma-HEq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="piggyPink">
+            <color red="0.91500002145767212" green="0.56099998950958252" blue="0.7149999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

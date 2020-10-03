@@ -177,19 +177,27 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="backButton" destination="lZD-De-Drq" id="izc-eO-pI9"/>
                         <outlet property="collectionView" destination="oOw-om-dkV" id="uM3-jt-Ihw"/>
                         <outlet property="refreshButton" destination="Q95-FX-L4M" id="INQ-JG-pN6"/>
                         <outlet property="searchField" destination="eLJ-Qd-DJJ" id="KX3-oJ-1PB"/>
+                        <segue destination="QEF-ZT-C2j" kind="show" identifier="showDetails" id="GK8-y7-SwE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAA-kZ-wLQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="-131.25"/>
+        </scene>
+        <!--DetailsScreen-->
+        <scene sceneID="Zbw-Pc-qI4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsScreen" id="QEF-ZT-C2j" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0RD-rB-lUh"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BwV-QV-nZT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="688" y="-131"/>
         </scene>
     </scenes>
     <resources>

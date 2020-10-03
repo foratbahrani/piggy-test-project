@@ -12,9 +12,9 @@ import Alamofire
 
 class SearchResultsCell: UICollectionViewCell {
     
-    var indexPath : IndexPath = IndexPath(item: 0, section: 0)
     var data : JSON? = nil { didSet { load() } }
     @IBOutlet var productImageView: UIImageView!
+    @IBOutlet var noImageLabel: UILabel!
     @IBOutlet var productTitleLabel: UILabel!
     
     func load() {
@@ -28,9 +28,14 @@ class SearchResultsCell: UICollectionViewCell {
         productTitleLabel.text = data["title"].string
         productImageView.showSkeleton()
         productImageView.backgroundColor = .skeletonDefault
-        let url = data["url"].string ?? ""
+        let url = data["imageUrl"].string ?? ""
+        if (url.count == 0) {
+            noImageLabel.isHidden = false
+            return
+        }
+        noImageLabel.isHidden = true
         AF.request(url).responseData { (response) in
-            if (self.data?["url"].string != data["url"].string) {
+            if (self.data?["imageUrl"].string != data["imageUrl"].string) {
                 return // cell reused for other data
             }
             

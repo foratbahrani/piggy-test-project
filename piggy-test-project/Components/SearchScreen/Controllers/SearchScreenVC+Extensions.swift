@@ -29,13 +29,20 @@ extension SearchScreenVC {
         }
         for cell in (collectionView.visibleCells as! [SearchResultsCell]) { cell.data = nil }
         self.view.showSkeleton()
-        AF.request("https://jsonplaceholder.typicode.com/photos").responseJSON { (response) in
+        let headers = [
+            "x-rapidapi-host": "amazon-price1.p.rapidapi.com",
+            "x-rapidapi-key": "2769e9277emsh941a83c9cf67f61p187952jsn99e25f798af6"
+        ]
+        let url = "https://amazon-price1.p.rapidapi.com/search?keywords=\(query)&marketplace=US".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+
+        AF.request(url ?? "", method: .get, parameters: nil, headers: HTTPHeaders(headers)).responseJSON { (response) in
             if let error = response.error {
                 print(error.localizedDescription)
             } else {
                 do {
                     let json = try JSON(data: response.data ?? Data())
                     self.data = json.array ?? []
+                    print(self.data)
                     self.view.hideSkeleton()
                 } catch let err {
                     self.searchError(error: err.localizedDescription)

@@ -31,6 +31,9 @@
 		FDF939B02527DC72006CDA15 /* SearchResultsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDF939AE2527DC72006CDA15 /* SearchResultsCell.xib */; };
 		FDF939B22527E18D006CDA15 /* SearchScreenVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939B12527E18D006CDA15 /* SearchScreenVC+Extensions.swift */; };
 		FDF939B52527F330006CDA15 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939B42527F330006CDA15 /* UIViewController+Extensions.swift */; };
+		FDF939BB252803FE006CDA15 /* DetailsScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF939BA252803FE006CDA15 /* DetailsScreen.storyboard */; };
+		FDF939BD25280413006CDA15 /* DetailsScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939BC25280413006CDA15 /* DetailsScreenVC.swift */; };
+		FDF939BF2528060A006CDA15 /* DetailsScreenVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF939BE2528060A006CDA15 /* DetailsScreenVC+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		FDF939AE2527DC72006CDA15 /* SearchResultsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultsCell.xib; sourceTree = "<group>"; };
 		FDF939B12527E18D006CDA15 /* SearchScreenVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchScreenVC+Extensions.swift"; sourceTree = "<group>"; };
 		FDF939B42527F330006CDA15 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		FDF939BA252803FE006CDA15 /* DetailsScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsScreen.storyboard; sourceTree = "<group>"; };
+		FDF939BC25280413006CDA15 /* DetailsScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsScreenVC.swift; sourceTree = "<group>"; };
+		FDF939BE2528060A006CDA15 /* DetailsScreenVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailsScreenVC+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +196,7 @@
 				FDF9397E252747F5006CDA15 /* WelcomeScreen */,
 				FDF9398625274B14006CDA15 /* HomeScreen */,
 				FDF9399A25278B6B006CDA15 /* SearchScreen */,
+				FDF939B6252802F3006CDA15 /* DetailsScreen */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -341,6 +348,40 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		FDF939B6252802F3006CDA15 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939B925280310006CDA15 /* Models */,
+				FDF939B82528030A006CDA15 /* Views */,
+				FDF939B725280300006CDA15 /* Controllers */,
+			);
+			path = DetailsScreen;
+			sourceTree = "<group>";
+		};
+		FDF939B725280300006CDA15 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939BC25280413006CDA15 /* DetailsScreenVC.swift */,
+				FDF939BE2528060A006CDA15 /* DetailsScreenVC+Extensions.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDF939B82528030A006CDA15 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDF939BA252803FE006CDA15 /* DetailsScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDF939B925280310006CDA15 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -452,6 +493,7 @@
 				FDF9399F25278BC8006CDA15 /* SearchScreen.storyboard in Resources */,
 				FDF9397725274376006CDA15 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				FDF9395025273F5F006CDA15 /* Assets.xcassets in Resources */,
+				FDF939BB252803FE006CDA15 /* DetailsScreen.storyboard in Resources */,
 				FDF939B02527DC72006CDA15 /* SearchResultsCell.xib in Resources */,
 				FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */,
 			);
@@ -521,6 +563,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDF939B22527E18D006CDA15 /* SearchScreenVC+Extensions.swift in Sources */,
+				FDF939BD25280413006CDA15 /* DetailsScreenVC.swift in Sources */,
 				FDF9394725273F5E006CDA15 /* AppDelegate.swift in Sources */,
 				FDF939AC252791CD006CDA15 /* ShadowView.swift in Sources */,
 				FDF9399525275FCB006CDA15 /* HomeVC+Extensions.swift in Sources */,
@@ -529,6 +572,7 @@
 				FDF9398C25274C2B006CDA15 /* HomeVC.swift in Sources */,
 				FDF939AF2527DC72006CDA15 /* SearchResultsCell.swift in Sources */,
 				FDF93983252748BA006CDA15 /* WelcomeLogo.swift in Sources */,
+				FDF939BF2528060A006CDA15 /* DetailsScreenVC+Extensions.swift in Sources */,
 				FDF9397D25274552006CDA15 /* WelcomeScreenVC.swift in Sources */,
 				FDF939B52527F330006CDA15 /* UIViewController+Extensions.swift in Sources */,
 				FDF9394925273F5E006CDA15 /* SceneDelegate.swift in Sources */,
