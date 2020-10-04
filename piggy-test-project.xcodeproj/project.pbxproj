@@ -12,7 +12,7 @@
 		FDBFCD65252A25A700E3ABAC /* BrowserScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBFCD64252A25A700E3ABAC /* BrowserScreenVC.swift */; };
 		FDBFCD67252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBFCD66252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift */; };
 		FDBFCD69252A2AA400E3ABAC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBFCD68252A2AA400E3ABAC /* WebKit.framework */; };
-		FDBFCD6B252A36B500E3ABAC /* START_HERE.md in Resources */ = {isa = PBXBuildFile; fileRef = FDBFCD6A252A36B500E3ABAC /* START_HERE.md */; };
+		FDBFCD6B252A36B500E3ABAC /* START_HERE.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FDBFCD6A252A36B500E3ABAC /* START_HERE.rtf */; };
 		FDF9394725273F5E006CDA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9394625273F5E006CDA15 /* AppDelegate.swift */; };
 		FDF9394925273F5E006CDA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9394825273F5E006CDA15 /* SceneDelegate.swift */; };
 		FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF9394C25273F5E006CDA15 /* WelcomeScreen.storyboard */; };
@@ -66,7 +66,7 @@
 		FDBFCD64252A25A700E3ABAC /* BrowserScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserScreenVC.swift; sourceTree = "<group>"; };
 		FDBFCD66252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserScreenVC+Extensions.swift"; sourceTree = "<group>"; };
 		FDBFCD68252A2AA400E3ABAC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		FDBFCD6A252A36B500E3ABAC /* START_HERE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = START_HERE.md; sourceTree = "<group>"; };
+		FDBFCD6A252A36B500E3ABAC /* START_HERE.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = START_HERE.rtf; sourceTree = "<group>"; };
 		FDF9394325273F5E006CDA15 /* piggy-test-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-test-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF9394625273F5E006CDA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF9394825273F5E006CDA15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 				FDF9395125273F5F006CDA15 /* LaunchScreen.storyboard */,
 				FDF9395425273F5F006CDA15 /* Info.plist */,
 				FDF9397625274376006CDA15 /* Quicksand-VariableFont_wght.ttf */,
-				FDBFCD6A252A36B500E3ABAC /* START_HERE.md */,
+				FDBFCD6A252A36B500E3ABAC /* START_HERE.rtf */,
 			);
 			path = "piggy-test-project";
 			sourceTree = "<group>";
@@ -543,7 +543,7 @@
 				FDF9395025273F5F006CDA15 /* Assets.xcassets in Resources */,
 				FDF939BB252803FE006CDA15 /* DetailsScreen.storyboard in Resources */,
 				FDBFCD63252A1E7D00E3ABAC /* BrowserScreen.storyboard in Resources */,
-				FDBFCD6B252A36B500E3ABAC /* START_HERE.md in Resources */,
+				FDBFCD6B252A36B500E3ABAC /* START_HERE.rtf in Resources */,
 				FDF939B02527DC72006CDA15 /* SearchResultsCell.xib in Resources */,
 				FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */,
 			);

@@ -163,7 +163,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="UZR-Xb-tOC" firstAttribute="leading" secondItem="CHm-4i-qQq" secondAttribute="leading" id="1Gm-j6-9tD"/>
                             <constraint firstItem="CHm-4i-qQq" firstAttribute="bottom" secondItem="oOw-om-dkV" secondAttribute="bottom" id="5qd-9x-CHi"/>
