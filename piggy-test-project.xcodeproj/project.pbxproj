@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		809E87F433F48D592C99085E /* Pods_piggy_test_project.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 479E0E3E76D9F4C485B31979 /* Pods_piggy_test_project.framework */; };
+		FDBFCD63252A1E7D00E3ABAC /* BrowserScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDBFCD62252A1E7D00E3ABAC /* BrowserScreen.storyboard */; };
+		FDBFCD65252A25A700E3ABAC /* BrowserScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBFCD64252A25A700E3ABAC /* BrowserScreenVC.swift */; };
+		FDBFCD67252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBFCD66252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift */; };
+		FDBFCD69252A2AA400E3ABAC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDBFCD68252A2AA400E3ABAC /* WebKit.framework */; };
 		FDF9394725273F5E006CDA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9394625273F5E006CDA15 /* AppDelegate.swift */; };
 		FDF9394925273F5E006CDA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF9394825273F5E006CDA15 /* SceneDelegate.swift */; };
 		FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDF9394C25273F5E006CDA15 /* WelcomeScreen.storyboard */; };
@@ -57,6 +61,10 @@
 		0AE8DBDE58BF35877E11FE2B /* Pods-piggy-test-project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-test-project.debug.xcconfig"; path = "Target Support Files/Pods-piggy-test-project/Pods-piggy-test-project.debug.xcconfig"; sourceTree = "<group>"; };
 		479E0E3E76D9F4C485B31979 /* Pods_piggy_test_project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_piggy_test_project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D739037CF0B44460BA0BE30 /* Pods-piggy-test-project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-piggy-test-project.release.xcconfig"; path = "Target Support Files/Pods-piggy-test-project/Pods-piggy-test-project.release.xcconfig"; sourceTree = "<group>"; };
+		FDBFCD62252A1E7D00E3ABAC /* BrowserScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BrowserScreen.storyboard; sourceTree = "<group>"; };
+		FDBFCD64252A25A700E3ABAC /* BrowserScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserScreenVC.swift; sourceTree = "<group>"; };
+		FDBFCD66252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrowserScreenVC+Extensions.swift"; sourceTree = "<group>"; };
+		FDBFCD68252A2AA400E3ABAC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		FDF9394325273F5E006CDA15 /* piggy-test-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "piggy-test-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDF9394625273F5E006CDA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDF9394825273F5E006CDA15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDBFCD69252A2AA400E3ABAC /* WebKit.framework in Frameworks */,
 				809E87F433F48D592C99085E /* Pods_piggy_test_project.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,9 +138,44 @@
 		F06695E665B7DAA220603AF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FDBFCD68252A2AA400E3ABAC /* WebKit.framework */,
 				479E0E3E76D9F4C485B31979 /* Pods_piggy_test_project.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FDBFCD5E252A1E4B00E3ABAC /* BrowserScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FDBFCD61252A1E6F00E3ABAC /* Models */,
+				FDBFCD60252A1E6C00E3ABAC /* Views */,
+				FDBFCD5F252A1E6200E3ABAC /* Controllers */,
+			);
+			path = BrowserScreen;
+			sourceTree = "<group>";
+		};
+		FDBFCD5F252A1E6200E3ABAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FDBFCD64252A25A700E3ABAC /* BrowserScreenVC.swift */,
+				FDBFCD66252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FDBFCD60252A1E6C00E3ABAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDBFCD62252A1E7D00E3ABAC /* BrowserScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDBFCD61252A1E6F00E3ABAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FDF9393A25273F5E006CDA15 = {
@@ -197,6 +241,7 @@
 				FDF9398625274B14006CDA15 /* HomeScreen */,
 				FDF9399A25278B6B006CDA15 /* SearchScreen */,
 				FDF939B6252802F3006CDA15 /* DetailsScreen */,
+				FDBFCD5E252A1E4B00E3ABAC /* BrowserScreen */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -494,6 +539,7 @@
 				FDF9397725274376006CDA15 /* Quicksand-VariableFont_wght.ttf in Resources */,
 				FDF9395025273F5F006CDA15 /* Assets.xcassets in Resources */,
 				FDF939BB252803FE006CDA15 /* DetailsScreen.storyboard in Resources */,
+				FDBFCD63252A1E7D00E3ABAC /* BrowserScreen.storyboard in Resources */,
 				FDF939B02527DC72006CDA15 /* SearchResultsCell.xib in Resources */,
 				FDF9394E25273F5E006CDA15 /* WelcomeScreen.storyboard in Resources */,
 			);
@@ -572,6 +618,8 @@
 				FDF9398C25274C2B006CDA15 /* HomeVC.swift in Sources */,
 				FDF939AF2527DC72006CDA15 /* SearchResultsCell.swift in Sources */,
 				FDF93983252748BA006CDA15 /* WelcomeLogo.swift in Sources */,
+				FDBFCD67252A26CC00E3ABAC /* BrowserScreenVC+Extensions.swift in Sources */,
+				FDBFCD65252A25A700E3ABAC /* BrowserScreenVC.swift in Sources */,
 				FDF939BF2528060A006CDA15 /* DetailsScreenVC+Extensions.swift in Sources */,
 				FDF9397D25274552006CDA15 /* WelcomeScreenVC.swift in Sources */,
 				FDF939B52527F330006CDA15 /* UIViewController+Extensions.swift in Sources */,

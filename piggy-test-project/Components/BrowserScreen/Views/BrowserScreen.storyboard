@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ndt-QD-s8H">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Quicksand-VariableFont_wght.ttf">
+            <string>Quicksand-Light_Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Browser ScreenVC-->
+        <scene sceneID="9zC-Ag-fd2">
+            <objects>
+                <viewController id="ndt-QD-s8H" customClass="BrowserScreenVC" customModule="piggy_test_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IhE-bF-wX3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-od-bBn">
+                                <rect key="frame" x="0.0" y="109" width="414" height="787"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-q0-quU" customClass="ShadowView" customModule="piggy_test_project" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="109"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Seach Amazon" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vr9-lr-Vgv" customClass="HomeSearchField" customModule="piggy_test_project" customModuleProvider="target">
+                                        <rect key="frame" x="72" y="54" width="222" height="40"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Aay-ro-5ma"/>
+                                            <constraint firstAttribute="width" priority="999" constant="200" id="Nlm-G0-o7d"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="searchField"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="ndt-QD-s8H" id="QPm-IT-AWl"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAf-vi-wSv" customClass="RoundedView" customModule="piggy_test_project" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="54" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-70-KF5">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" name="piggyPink"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2" maxY="0.0"/>
+                                                <state key="normal" image="chevron.left" catalog="system">
+                                                    <color key="titleColor" name="piggyPink"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="semibold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="closeButtonTouchUpInside:" destination="ndt-QD-s8H" eventType="touchUpInside" id="xNi-ob-eKJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="6jq-70-KF5" firstAttribute="leading" secondItem="sAf-vi-wSv" secondAttribute="leading" id="4RV-ij-frD"/>
+                                            <constraint firstItem="6jq-70-KF5" firstAttribute="top" secondItem="sAf-vi-wSv" secondAttribute="top" id="EUh-C2-NX6"/>
+                                            <constraint firstAttribute="width" constant="40" id="MQo-Qw-BrJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6jq-70-KF5" secondAttribute="trailing" id="e7A-O3-Hd7"/>
+                                            <constraint firstAttribute="bottom" secondItem="6jq-70-KF5" secondAttribute="bottom" id="r5s-tl-O2f"/>
+                                            <constraint firstAttribute="height" constant="40" id="yJy-di-8J1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftt" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXI-Za-xv5" customClass="RoundedView" customModule="piggy_test_project" customModuleProvider="target">
+                                        <rect key="frame" x="310" y="54" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL0-2T-MUI">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="arrow.left" catalog="system">
+                                                    <color key="titleColor" name="piggyPink"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="semibold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backButtonTouchUpInside:" destination="ndt-QD-s8H" eventType="touchUpInside" id="nA5-4b-SwP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="KAZ-mZ-soG"/>
+                                            <constraint firstAttribute="trailing" secondItem="vL0-2T-MUI" secondAttribute="trailing" id="Y3O-4s-ngN"/>
+                                            <constraint firstAttribute="height" constant="40" id="ZM3-KV-7Oo"/>
+                                            <constraint firstItem="vL0-2T-MUI" firstAttribute="leading" secondItem="CXI-Za-xv5" secondAttribute="leading" id="duV-8b-Omh"/>
+                                            <constraint firstItem="vL0-2T-MUI" firstAttribute="top" secondItem="CXI-Za-xv5" secondAttribute="top" id="mtk-Uf-VdY"/>
+                                            <constraint firstAttribute="bottom" secondItem="vL0-2T-MUI" secondAttribute="bottom" id="tUI-OI-udR"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftt" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yc-Cw-M5c" customClass="RoundedView" customModule="piggy_test_project" customModuleProvider="target">
+                                        <rect key="frame" x="358" y="54" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzQ-rv-hMK">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" image="arrow.right" catalog="system">
+                                                    <color key="titleColor" name="piggyPink"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="18" weight="semibold"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="forwardButtonTouchUpInside:" destination="ndt-QD-s8H" eventType="touchUpInside" id="RFV-wI-d3P"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="VzQ-rv-hMK" firstAttribute="top" secondItem="0Yc-Cw-M5c" secondAttribute="top" id="1f1-fj-sji"/>
+                                            <constraint firstAttribute="height" constant="40" id="C5R-I2-HOx"/>
+                                            <constraint firstItem="VzQ-rv-hMK" firstAttribute="leading" secondItem="0Yc-Cw-M5c" secondAttribute="leading" id="Ird-lV-7Ay"/>
+                                            <constraint firstAttribute="width" constant="40" id="akQ-Of-QbN"/>
+                                            <constraint firstAttribute="trailing" secondItem="VzQ-rv-hMK" secondAttribute="trailing" id="ioR-WD-5UI"/>
+                                            <constraint firstAttribute="bottom" secondItem="VzQ-rv-hMK" secondAttribute="bottom" id="s6p-Mm-M7j"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="topLeftt" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomRight" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="bottomLeft" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZS8-ak-k8Z" customClass="GradientProgressBar" customModule="GradientProgressBar">
+                                        <rect key="frame" x="0.0" y="107" width="414" height="2"/>
+                                        <color key="backgroundColor" name="piggyPink"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="nku-cq-JIT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="sAf-vi-wSv" firstAttribute="centerY" secondItem="Vr9-lr-Vgv" secondAttribute="centerY" id="8Hy-wF-PVf"/>
+                                    <constraint firstItem="ZS8-ak-k8Z" firstAttribute="leading" secondItem="KTW-q0-quU" secondAttribute="leading" id="A11-Hh-77q"/>
+                                    <constraint firstItem="0Yc-Cw-M5c" firstAttribute="leading" secondItem="CXI-Za-xv5" secondAttribute="trailing" constant="8" id="DR3-ap-eF4"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZS8-ak-k8Z" secondAttribute="trailing" id="F0n-cQ-IUm"/>
+                                    <constraint firstItem="Vr9-lr-Vgv" firstAttribute="leading" secondItem="sAf-vi-wSv" secondAttribute="trailing" constant="16" id="OrG-yq-yNr"/>
+                                    <constraint firstItem="sAf-vi-wSv" firstAttribute="leading" secondItem="KTW-q0-quU" secondAttribute="leading" constant="16" id="OwI-hS-OvR"/>
+                                    <constraint firstItem="CXI-Za-xv5" firstAttribute="leading" secondItem="Vr9-lr-Vgv" secondAttribute="trailing" constant="16" id="UKn-7C-tWT"/>
+                                    <constraint firstItem="CXI-Za-xv5" firstAttribute="centerY" secondItem="Vr9-lr-Vgv" secondAttribute="centerY" id="VET-Lc-yqf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vr9-lr-Vgv" secondAttribute="bottom" constant="15" id="YYa-lT-gmn"/>
+                                    <constraint firstItem="0Yc-Cw-M5c" firstAttribute="centerY" secondItem="Vr9-lr-Vgv" secondAttribute="centerY" id="gSb-Z3-wNQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Yc-Cw-M5c" secondAttribute="trailing" constant="16" id="jXe-fl-Il0"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZS8-ak-k8Z" secondAttribute="bottom" id="tjP-dg-aa9"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowY">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KTW-q0-quU" firstAttribute="top" secondItem="IhE-bF-wX3" secondAttribute="top" id="Bwd-eO-Bd1"/>
+                            <constraint firstItem="GxV-zM-iWe" firstAttribute="top" secondItem="KTW-q0-quU" secondAttribute="bottom" constant="-65" id="Mvm-Qx-lTP"/>
+                            <constraint firstItem="hW7-od-bBn" firstAttribute="trailing" secondItem="GxV-zM-iWe" secondAttribute="trailing" id="jT0-ZN-d9y"/>
+                            <constraint firstAttribute="bottom" secondItem="hW7-od-bBn" secondAttribute="bottom" id="k3p-hE-qHb"/>
+                            <constraint firstItem="hW7-od-bBn" firstAttribute="leading" secondItem="GxV-zM-iWe" secondAttribute="leading" id="pku-I5-51y"/>
+                            <constraint firstItem="KTW-q0-quU" firstAttribute="trailing" secondItem="GxV-zM-iWe" secondAttribute="trailing" id="qNC-ob-U7K"/>
+                            <constraint firstItem="hW7-od-bBn" firstAttribute="top" secondItem="KTW-q0-quU" secondAttribute="bottom" id="tIJ-PO-wXz"/>
+                            <constraint firstItem="KTW-q0-quU" firstAttribute="leading" secondItem="GxV-zM-iWe" secondAttribute="leading" id="wPI-J7-lJP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GxV-zM-iWe"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="vL0-2T-MUI" id="25R-sg-RRp"/>
+                        <outlet property="closeButton" destination="6jq-70-KF5" id="NLB-d6-ne6"/>
+                        <outlet property="forwardButton" destination="VzQ-rv-hMK" id="GoY-Bc-4hv"/>
+                        <outlet property="progressBar" destination="ZS8-ak-k8Z" id="aoW-Na-9DM"/>
+                        <outlet property="searchField" destination="Vr9-lr-Vgv" id="8Ei-n3-0IB"/>
+                        <outlet property="webView" destination="hW7-od-bBn" id="UN2-0V-2YN"/>
+                        <segue destination="gsw-Gr-S2M" kind="show" identifier="showDetails" id="1SN-pN-uzU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1I-2B-o2q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.884057971014496" y="150.66964285714286"/>
+        </scene>
+        <!--DetailsScreen-->
+        <scene sceneID="bhL-3j-0e3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailsScreen" id="gsw-Gr-S2M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="p7D-C0-51c"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5c-zx-E3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="718" y="151"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <namedColor name="piggyPink">
+            <color red="0.91500002145767212" green="0.56099998950958252" blue="0.7149999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

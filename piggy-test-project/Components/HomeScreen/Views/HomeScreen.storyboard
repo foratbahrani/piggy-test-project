@@ -107,6 +107,9 @@
                                 <state key="normal" title="Use a Browser">
                                     <color key="titleColor" name="piggyPink"/>
                                 </state>
+                                <connections>
+                                    <segue destination="aSc-O7-gIB" kind="show" id="9Sd-TL-MC5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What are you looking for?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-ev-zpJ" customClass="HomeTitleLabel" customModule="piggy_test_project" customModuleProvider="target">
                                 <rect key="frame" x="24" y="128" width="366" height="135.5"/>
@@ -170,7 +173,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bw8-Vv-UgC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1825" y="-66"/>
+            <point key="canvasLocation" x="1824" y="-15"/>
+        </scene>
+        <!--BrowserScreen-->
+        <scene sceneID="8hC-vd-Vf2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BrowserScreen" id="aSc-O7-gIB" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Yg1-y4-ORS"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVZ-qn-R2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="20"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SnG-YU-74h">

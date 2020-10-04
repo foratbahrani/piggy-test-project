@@ -42,7 +42,6 @@ extension SearchScreenVC {
                 do {
                     let json = try JSON(data: response.data ?? Data())
                     self.data = json.array ?? []
-                    print(self.data)
                     self.view.hideSkeleton()
                 } catch let err {
                     self.searchError(error: err.localizedDescription)

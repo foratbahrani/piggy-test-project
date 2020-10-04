@@ -46,7 +46,7 @@
                                         <rect key="frame" x="82" y="54" width="250" height="40"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="Edy-o9-s0F"/>
+                                            <constraint firstAttribute="width" priority="999" constant="250" id="Edy-o9-s0F"/>
                                             <constraint firstAttribute="height" constant="40" id="m8f-al-V6Q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Quicksand-Light_Regular" family="Quicksand" pointSize="17"/>
@@ -133,10 +133,12 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="Ige-YO-CVm" firstAttribute="centerY" secondItem="eLJ-Qd-DJJ" secondAttribute="centerY" id="TP3-dK-etH"/>
+                                    <constraint firstItem="eLJ-Qd-DJJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8IZ-M5-V9M" secondAttribute="trailing" constant="16" id="UQR-Bn-kGr"/>
                                     <constraint firstItem="eLJ-Qd-DJJ" firstAttribute="centerX" secondItem="UZR-Xb-tOC" secondAttribute="centerX" id="XZO-ns-U7s"/>
+                                    <constraint firstItem="Ige-YO-CVm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eLJ-Qd-DJJ" secondAttribute="trailing" constant="16" id="Xxm-bX-XYr"/>
                                     <constraint firstAttribute="bottom" secondItem="eLJ-Qd-DJJ" secondAttribute="bottom" constant="15" id="cuo-Dn-88X"/>
                                     <constraint firstAttribute="trailing" secondItem="Ige-YO-CVm" secondAttribute="trailing" constant="16" id="nvI-bW-RIY"/>
                                     <constraint firstItem="8IZ-M5-V9M" firstAttribute="centerY" secondItem="eLJ-Qd-DJJ" secondAttribute="centerY" id="wSq-Of-KxL"/>
