@@ -25,4 +25,11 @@ class HomeVC: UIViewController {
         setupHero()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if (segue.destination is SearchScreenVC && sender is String) {
+            (segue.destination as! SearchScreenVC).query = sender as? String
+        }
+    }
+    
 }

@@ -15,7 +15,6 @@ extension DetailsScreenVC {
         self.header.hero.modifiers = [.fade]
         self.detailsLabel.hero.modifiers = [.fade, .translate(y: -200)]
         self.asinCodeLabel.hero.modifiers = [.fade, .translate(y: -200)]
-
     }
     
 }

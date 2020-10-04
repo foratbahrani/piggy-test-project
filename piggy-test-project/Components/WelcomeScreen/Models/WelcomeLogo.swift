@@ -10,6 +10,7 @@ import UIKit
 
 class WelcomeLogo: UIImageView {
 
+    // used to animate the logo in the welcomeScreen
     func animate(completion: @escaping (()->())) {
         UIView.animate(withDuration: 0.4, delay: 0.5, options: .curveEaseOut, animations: {
             self.transform = CGAffineTransform.identity.scaledBy(x: 1.2, y: 1.2)

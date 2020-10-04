@@ -6,11 +6,11 @@
 //  Copyright © 2020 Forat Bahrani. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 @IBDesignable
 class RoundedView: UIView {
+    // Provides a UIView with rounded corners
     
     @IBInspectable var radius: CGFloat = 0 { didSet { commonInit() } }
     @IBInspectable var topRight: Bool = false { didSet { commonInit() } }

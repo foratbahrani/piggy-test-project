@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SkeletonView
 
 extension SearchScreenVC {
     
@@ -56,11 +57,49 @@ extension SearchScreenVC {
     }
 }
 
-
+// MARK: Textfield Delegate
 extension SearchScreenVC : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         search(for: textField.text)
         textField.endEditing(true)
         return true
     }
+}
+
+// MARK: Collection View
+extension SearchScreenVC : UICollectionViewDelegate, SkeletonCollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "SearchResultsCell"
+    }
+    
+    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultsCell", for: indexPath) as! SearchResultsCell
+        cell.data = data[indexPath.row]
+        return cell
+    }
+    
+    // collection view layout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let gap : CGFloat = 16
+        let inset : CGFloat = 32
+        let cellsPerRow : CGFloat = 2
+        let cellPerimeter = (collectionView.bounds.size.width / cellsPerRow) - (gap / cellsPerRow) - (inset / cellsPerRow)
+        return CGSize(width: cellPerimeter, height: cellPerimeter)
+    }
+    
+    // show asin when a product is selected
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let ASIN = data[indexPath.row]["ASIN"].string
+        self.performSegue(withIdentifier: "showDetails", sender: ASIN)
+    }
+    
 }

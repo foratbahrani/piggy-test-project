@@ -17,16 +17,16 @@ class SearchScreenVC: UIViewController {
     @IBOutlet var backButton: UIButton!
     @IBOutlet var searchField: HomeSearchField!
     @IBOutlet var refreshButton: UIButton!
-    var searchFor : String? = nil
+    
+    var query : String? = nil
     var data : [JSON] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHero()
         registerCells()
-//hideKeyboardOnTap()
-        self.searchField.text = searchFor
-        search(for: searchFor)
+        self.searchField.text = query
+        search(for: query)
         self.view.showSkeleton()
     }
     
@@ -46,37 +46,3 @@ class SearchScreenVC: UIViewController {
 }
 
 
-extension SearchScreenVC : UICollectionViewDelegate, SkeletonCollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "SearchResultsCell"
-    }
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SearchResultsCell", for: indexPath) as! SearchResultsCell
-        cell.data = data[indexPath.row]
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let gap : CGFloat = 16
-        let inset : CGFloat = 32
-        let cellsPerRow : CGFloat = 2
-        let perimeter = (collectionView.bounds.size.width / cellsPerRow) - (gap / cellsPerRow) - (inset / cellsPerRow)
-        return CGSize(width: perimeter, height: perimeter)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let ASIN = data[indexPath.row]["ASIN"].string
-        self.performSegue(withIdentifier: "showDetails", sender: ASIN)
-    }
-    
-}

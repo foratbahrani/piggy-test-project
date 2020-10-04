@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable
 class ShadowView: RoundedView {
+    // Provides a UIView with a drop shadow
 
     @IBInspectable var shadowColor : UIColor? = nil { didSet { updateShadow()} }
     @IBInspectable var shadowRadius : CGFloat = 0 { didSet { updateShadow()} }

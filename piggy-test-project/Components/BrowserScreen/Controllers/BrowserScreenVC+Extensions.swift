@@ -21,6 +21,7 @@ extension BrowserScreenVC: WKNavigationDelegate {
         webView.load(URLRequest(url: URL(string: "https://amazon.com")!))
     }
     
+    // enables/disables back and forward button.
     func handleNavigationButtons() {
         // back button
         if webView.canGoBack {
@@ -40,6 +41,7 @@ extension BrowserScreenVC: WKNavigationDelegate {
         }
     }
     
+    // checks for an ASIN code in webpage using regex and if found, shows it.
     func searchASIN(webView: WKWebView) {
         let url = webView.url?.absoluteString ?? ""
         let range = NSRange(location: 0, length: url.utf16.count)
@@ -52,9 +54,11 @@ extension BrowserScreenVC: WKNavigationDelegate {
         self.performSegue(withIdentifier: "showDetails", sender: ASIN)
     }
     
+    // finds the current progress of webview
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "estimatedProgress" {
             progressBar.setProgress(Float(webView.estimatedProgress) , animated: true)
+            // webview is hidden the first time (this fixes an appearence bug in dark mode)
             if webView.alpha == 0 && Float(webView.estimatedProgress) > 0.75 {
                 UIView.animate(withDuration: 0.3) {
                     self.webView.alpha = 1

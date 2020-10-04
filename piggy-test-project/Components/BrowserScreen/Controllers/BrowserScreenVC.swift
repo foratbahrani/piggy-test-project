@@ -24,7 +24,6 @@ class BrowserScreenVC: UIViewController {
         setupWebview()
     }
     
-    
     @IBAction func closeButtonTouchUpInside(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }

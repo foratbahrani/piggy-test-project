@@ -11,15 +11,13 @@ import UIKit
 
 extension HomeVC {
     
+    // start animation
     func animate() {
-        
         let views = [piggyIconImageView, titleLabel, searchField, orStackView, useBrowserButton]
-        
         for i in 0..<views.count {
             // hide & move down
             views[i]?.alpha = 0
             views[i]?.transform = CGAffineTransform.identity.translatedBy(x: 0, y: 32)
-
             // fade in
             let delay =  0.1 * Double(i)
             UIView.animate(withDuration: 0.4, delay: delay, options: .curveEaseOut, animations: {
@@ -29,6 +27,7 @@ extension HomeVC {
         }
     }
     
+    // transition animations
     func setupHero() {
         self.searchField.hero.id = "searchField"
         self.piggyIconImageView.hero.modifiers = [.translate(y: -100), .fade]
@@ -51,14 +50,7 @@ extension HomeVC {
     }
 
     @objc fileprivate func keyboardWillHide(notification: NSNotification){
-//        titleLabel.expand(notification: notification, disactivate: titleLabelHeight)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if (segue.destination is SearchScreenVC && sender is String) {
-            (segue.destination as! SearchScreenVC).searchFor = sender as? String
-        }
+        //titleLabel.expand(notification: notification, disactivate: titleLabelHeight)
     }
     
 }
