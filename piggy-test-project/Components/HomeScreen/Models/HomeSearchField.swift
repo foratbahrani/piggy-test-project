@@ -13,7 +13,7 @@ class HomeSearchField: UITextField {
     
     @IBInspectable var cornerRadius : CGFloat = 32 { didSet { self.layer.cornerRadius = self.cornerRadius } }
     @IBInspectable var padding : CGFloat = 24
-    @IBInspectable var isTitned : Bool = false { didSet { setIconTint() } }
+    @IBInspectable var isTinted : Bool = false { didSet { setIconTint() } }
     
     // magnifier icon, its constraints and tap
     let magnifierIcon : UIButton = UIButton(type: .custom)
@@ -64,7 +64,7 @@ extension HomeSearchField {
     }
     
     private func setIconTint() {
-        magnifierIcon.tintColor = isTitned ? #colorLiteral(red: 0.9215686275, green: 0.6156862745, blue: 0.7490196078, alpha: 1) : .secondaryLabel
+        magnifierIcon.tintColor = isTinted ? #colorLiteral(red: 0.9215686275, green: 0.6156862745, blue: 0.7490196078, alpha: 1) : .secondaryLabel
     }
     
     private func addMagnifierIcon() {
